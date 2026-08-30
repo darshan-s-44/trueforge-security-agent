@@ -109,10 +109,14 @@ npm run start:harness
 
 ## 📊 Qodo Code Review & Safety Evidence
 
+> **Qodo Review Summary**: The core architecture and safety mechanisms (UUID 5-min TTL tokens, Docker sandbox mounts, and Windows ESM patches) were reviewed via automated AI code analysis in Qodo. All high-severity and security finding recommendations were addressed and validated prior to merging.
+
+### Feature & Review Matrix
+
 | Review Category | Assessment / Feature Implemented | Verification Method | Status |
 |---|---|---|---|
 | **Human Gate Security** | One-time UUID token with 5-minute TTL & automatic invalidation after use. | Tested in `src/mcp-server.ts` unit logic. | ✅ PASSED |
-| **Sandbox Isolation** | All destructive operations execute inside `docker/scripts/erase.sh` sandbox mounts. | Verified with `--mode simulate` and `--mode execute`. | ✅ PASSED |
+| **Sandbox Isolation** | All destructive operations execute inside `docker/scripts/erase.js` sandbox mounts. | Verified with `--mode simulate` and `--mode execute`. | ✅ PASSED |
 | **Windows ESM Compatibility** | Automated `pathToFileURL` conversion for Windows Node.js import paths. | Verified with `scripts/patch-kysely.py`. | ✅ PASSED |
 | **Data Integrity** | Content regex inspection prevents accidental deletion of preserved evidence files. | Tested via `src/classifier/classify.py`. | ✅ PASSED |
 | **Audit Compliance** | Structured JSON logging per session saved to `logs/session_YYYY-MM-DD.json`. | Verified with `src/logger.ts`. | ✅ PASSED |
