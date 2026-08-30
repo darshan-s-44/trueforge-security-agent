@@ -1,0 +1,32 @@
+[
+  {
+    "id": "rb-001",
+    "original_filename": "deleted_passwords.txt",
+    "file_path": "C:\\4th_year\\hackathon\\trueforge\\security_driven\\scripts\\..\\sandbox\\target-drive\\deleted_passwords.txt",
+    "deleted_at": "2026-08-29T09:29:23Z",
+    "deleted_by": "user_alice",
+    "original_size_bytes": 37,
+    "recoverable": true,
+    "forensic_hash": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "id": "rb-002",
+    "original_filename": "tax_return_2023.pdf",
+    "file_path": "C:\\4th_year\\hackathon\\trueforge\\security_driven\\scripts\\..\\sandbox\\target-drive\\tax_return_2023.pdf",
+    "deleted_at": "2026-08-29T21:29:23Z",
+    "deleted_by": "user_bob",
+    "original_size_bytes": 49,
+    "recoverable": true,
+    "forensic_hash": "sha256:8f434346648f6b96df89dda901c5176b10a6d83961dd3c1ac88b59b2dc327aa4"
+  },
+  {
+    "id": "rb-003",
+    "original_filename": "old_family_photo.png",
+    "file_path": "C:\\4th_year\\hackathon\\trueforge\\security_driven\\scripts\\..\\sandbox\\target-drive\\old_family_photo.png",
+    "deleted_at": "2026-08-30T08:29:23Z",
+    "deleted_by": "user_alice",
+    "original_size_bytes": 26,
+    "recoverable": true,
+    "forensic_hash": "sha256:7c9e7c1494b2684ab7c19d6e6ab37a1e0b0e5d0124317181c000e335274d8969"
+  }
+]

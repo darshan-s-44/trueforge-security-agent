@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "trueforge-security-mcp": {
+      "command": "npx",
+      "args": ["tsx", "src/mcp-server.ts"],
+      "env": {
+        "NODE_ENV": "development"
+      }
+    }
+  }
+}

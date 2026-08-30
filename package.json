@@ -1,0 +1,47 @@
+{
+  "name": "trueforge-security-erasure-tool",
+  "version": "1.0.0",
+  "description": "Secure Data Erasure & Advanced File Recovery Tool on TrueForge Agent Harness",
+  "main": "src/agent.ts",
+  "type": "module",
+  "scripts": {
+    "postinstall": "python scripts/patch-kysely.py",
+    "seed": "python scripts/seed_filesystem.py",
+    "build": "tsc",
+    "start:mcp": "tsx src/mcp-server.ts",
+    "start:harness": "node node_modules/@truefoundry/trueforge/dist/cli.js",
+    "start:harness:port": "node node_modules/@truefoundry/trueforge/dist/cli.js --port 8790",
+    "start:docker": "docker compose up -d",
+    "stop:docker": "docker compose down",
+    "dev": "tsx src/agent.ts",
+    "verify": "node scripts/verify-setup.js",
+    "test": "python scripts/test_workflow.py",
+    "docker:build": "docker build -t trueforge-erasure-sandbox -f docker/Dockerfile ."
+  },
+  "keywords": [
+    "secure-data-erasure",
+    "file-recovery",
+    "trueforge",
+    "agent-harness",
+    "mcp",
+    "human-in-the-loop",
+    "qodo"
+  ],
+  "author": "TrueForge Security Team",
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.29.0",
+    "@truefoundry/trueforge": "^0.1.4",
+    "@truefoundry/trueforge-core": "^0.1.4",
+    "dotenv": "^16.4.7",
+    "hono": "^4.12.34",
+    "uuid": "^11.1.0",
+    "zod": "^3.24.2"
+  },
+  "devDependencies": {
+    "@types/node": "^24.12.0",
+    "@types/uuid": "^10.0.0",
+    "tsx": "^4.19.3",
+    "typescript": "^5.7.3"
+  }
+}
